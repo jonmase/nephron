@@ -18,24 +18,25 @@ Click on a tube value to highlight the value and watch it progress through the t
 
 Opening index.html with no url parameters will show all the possible setup options:
 
-*Length - Short, Medium or Long
-*Antidiuretic Hormone (ADH) - Present or Absent
-*NKCC stimulated - on or off
-*CD is water permeable - on or off
-*IMCD is urea permeable - on or off
-*Loop Diuretic - on or off
+* Length - Short, Medium or Long
+* Antidiuretic Hormone (ADH) - Present or Absent
+* NKCC (Na-K-Cl cotransporter) stimulated - on or off
+* CD is water permeable - on or off
+* IMCD is urea permeable - on or off
+* Loop Diuretic - on or off
 
 URL parameters can be used to only show certain setup options. The options will be shown for all parameters that are set to a value (value can be anything, including 0, false, but not empty). The parameters are as follows:
 
-*l - show the length options
-*a - show the ADH options
-*o - show the NKCC stimulation, CD water permeability and IMCD urea permeability options
-*d - show the Loop Diuretic option
+* l - show the length options
+* a - show the ADH options
+* o - show the NKCC stimulation, CD water permeability and IMCD urea permeability options
+* d - show the Loop Diuretic option
 
 For example ../index.html?l=1&d=1 will show the length and loop diuretic options only.
 
 Contributors
 -------
 
-Idea and Science: Dr Robert Wilkins, Department of Physiology, Anatomy and Genetics, University of Oxford
-Code: Dr Damion Young and Jon Mason, Medical Sciences Division Learning Technologies, University of Oxford
+**Idea and Science:** Dr Robert Wilkins, Department of Physiology, Anatomy and Genetics, University of Oxford
+
+**Code:** Dr Damion Young and Jon Mason, Medical Sciences Division Learning Technologies, University of Oxford
