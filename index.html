@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>Nephron Model</title>
+<link rel=StyleSheet href="css/style.css" type="text/css">
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.getUrlParam.js"></script>
+<script type="text/javascript" src="js/jquery.iframe-auto-height.plugin.js"></script>
+<script type="text/javascript" src="js/model.js"></script>
+<script>
+
+function callAutoHeight() {
+ $('#nephron_iframe', top.document).iframeAutoHeight({heightOffset: 15});
+}
+
+</script>
+
+</head>
+<body>
+<div id="model">&nbsp;</div>
+<div id="setup">
+	<div id="setupFormDiv">
+		<h3>Setup</h3>
+		<p>Use the options below to modify the scenario.</p>
+		<form id="setup_form" action="javascript: void(0);" method="post">
+			<div id="lengthInput" style="margin-bottom: 20px; margin-top: 10px;">
+				<label for="tubeHeight"><b>Loop Length: </b></label><br />
+				<input type="radio" name="tubeHeight" value=5 onClick="getData('tubeHeight');">Short</input>
+				<input type="radio" name="tubeHeight" value=10 onClick="getData('tubeHeight');">Medium</input>
+				<input type="radio" name="tubeHeight" value=15 onClick="getData('tubeHeight');">Long</input>
+			
+			</div>
+			<div id="ADHInput" style="margin-bottom: 7px;"><label for="ADH"><b>Antidiuretic Hormone (ADH): </b></label><br />
+				<input type="radio" name="ADH" value=1 onClick="getData('ADH');">Present</input>
+				<input type="radio" name="ADH" value=0 onClick="getData('ADH');">Absent</input>
+			</div>
+			<div id="optionsInput" style="padding-left: 30px; margin-bottom: 20px;">
+				<input type="checkbox" id="nkcc" checked onClick="getData('nkcc');"> NKCC stimulated</input><br />
+				<input type="checkbox" id="cdwater" checked onClick="getData('cdwater');"> CD is water permeable</input><br />
+				<input type="checkbox" id="cdurea" checked onClick="getData('cdurea');"> IMCD is urea permeable</input>
+			</div>
+			<div id="diureticInput">
+				<input type="checkbox" id="loopdiuretic" onClick="getData('loopdiuretic');"> Loop Diuretic</input>
+			</div>
+		</form>
+	</div>
+	<h3>Actions</h3>
+	<p>
+		<button type="button" id="stepLink">Step</button>
+		<button type="button" id="jogLink">Jog</button>
+		<button type="button" id="runLink">Run</button>
+		<button type="button" id="pauseLink" disabled>Pause</button>
+		<button type="button" id="resetLink">Reset</button>
+	</p>
+	<p id ="stepCount">0 steps </p>
+	<p id="thisStep"> </p>
+</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		setup();
+	});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+body{
+	/*font-family: "Trebuchet MS", Arial, Sans-Serif;*/
+	font-family: Arial, Sans-Serif;
+	/*font-size: 16px;*/
+	font-size: 14px;
+	background-color: #FFFFFF;
+	margin-top:0;
+	margin-bottom: 0;
+}
+
+h3 {
+	margin-bottom: 10px;
+}
+
+#setup{
+position: absolute;
+top: 0; 
+/*left: 0;
+right: 0;
+bottom: 0;*/
+float: left;
+margin-left: 320px;
+width: 320px;
+}
+
+/*#setupFormDiv {
+	display: none;
+}*/
+
+#model {
+width: 320px;
+}
+
+table.nephron {
+	border-collapse: collapse;
+}
+
+td.nephron {
+	border: 3px solid black;
+	width: 50px;
+	text-align: center;
+	vertical-align: middle;
+	padding: 1px;
+}
+td.valueCell {
+	height: 30px;
+	background-color: #FFFFFF;
+}
+
+td.descending {
+	border-left: 3px solid blue;
+	border-right: 3px solid blue;
+	border-top: none;
+	border-bottom: none;
+}
+td.interstitial {
+	border: none;
+	color: #fff;
+}
+td.ascending {
+	border-top: none;
+	border-bottom: none;
+	border-bottom-width: 0;
+}
+td.ascending.stimulated {
+	border-left: 3px solid red;
+	border-right: 3px solid red;
+}
+td.ascending.unstimulated {
+	border-left: 3px solid #B20000;
+	border-right: 3px solid #B20000;
+}
+
+td.collecting {
+	border: none;
+	border-left: 3px solid black;
+	border-right: 3px solid black;
+}
+td.collecting.water {
+	border-left: 3px solid blue;
+	border-right: 3px solid blue;
+	border-top: none;
+	border-bottom: none;
+}
+td.collecting.urea{
+	border-left: 3px solid #748D43;
+	border-right: 3px solid #748D43;
+	border-top: none;
+	border-bottom: none;
+}
+
+td.descending, td.ascending, td.collecting {
+	cursor: pointer;
+}
+
+td.highlighted {
+	font-weight: bold;
+	font-size: 120%;
+}
+
+
+#loop_bottomleft {
+	width: 40px;
+	/*border: 2px solid white;*/
+	border: none;
+}
+#loop_topmid {
+	border-top: 10px solid #FFFFFF;
+}
+#loop_bottommid {
+	border-bottom: 10px solid #FFFFFF;
+}
+
+/*td.loop.middle {
+	border-left: none;
+	border-right: none;
+}
+td.loop.bottomright {
+	border-top: none;
+	border-left: none;
+}
+td.loop.topleft {
+	border-bottom: none;
+	border-right: none;
+}
+td.loop.topright {
+	border-bottom: none;
+	border-left: none;
+}*/
+td.blank {
+	border: none;
+}
+
+#thisStep {
+	height: 4.2em;
+}
+
+#thisStep img {
+	height: 20px; 
+	vertical-align: middle;
+}
+
+/*#lengthInput, #ADHInput, #optionsInput, #diureticInput {
+	display: none;
+}*/
