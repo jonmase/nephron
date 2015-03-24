@@ -26,12 +26,12 @@ URL parameters can be used to only show certain setup options. The options will 
 * s - set this to "none" or "all" to override all the other setup visibility options and show none/all of the options
 
 For example:
-../index.html?l=1&d=1 will show the length and loop diuretic options only. 
-../index.html?l=true&d=yes&a=0&o=false will also show the length and loop diuretic options only. 
-../index.html will show everything
-../index.html?l=1&d=true&a=yes&o=on will also show everything
-../index.html?s=all will also show everything
-../index.html?l=0&d=0&a=0&o=0&s=all will also show everything
+* ../index.html?l=1&d=1 will show the length and loop diuretic options only. 
+* ../index.html?l=true&d=yes&a=0&o=false will also show the length and loop diuretic options only. 
+* ../index.html will show everything
+* ../index.html?l=1&d=true&a=yes&o=on will also show everything
+* ../index.html?s=all will also show everything
+* ../index.html?l=0&d=0&a=0&o=0&s=all will also show everything
 
 One further parameter, b, defines whether ADH is present (default is absent). Similar to above, ADH will be present if this value is set, and set to anything other than 0, false or no. This can be set whether or not the ADH setup option is visible or not. 
 
