@@ -659,10 +659,10 @@ function setup() {
 	 */
 	 
 	//Get URL parameters for form sections to show
-	var showLengthInput = $(document).getUrlParam("l"); 
-	var showADHInput = $(document).getUrlParam("a"); 
-	var showOptionsInput = $(document).getUrlParam("o"); 
-	var showDiureticInput = $(document).getUrlParam("d"); 
+	var showLengthInput = parseInt($(document).getUrlParam("l")); 
+	var showADHInput = parseInt($(document).getUrlParam("a")); 
+	var showOptionsInput = parseInt($(document).getUrlParam("o")); 
+	var showDiureticInput = parseInt($(document).getUrlParam("d")); 
 	var showAllOrNone = $(document).getUrlParam("s");
 	
 	//If "s" is set, show all or none of the inputs
