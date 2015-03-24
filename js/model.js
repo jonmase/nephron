@@ -659,10 +659,10 @@ function setup() {
 	 */
 	 
 	//Get URL parameters for form sections to show
-	var showLengthInput = parseInt($(document).getUrlParam("l")); 
-	var showADHInput = parseInt($(document).getUrlParam("a")); 
-	var showOptionsInput = parseInt($(document).getUrlParam("o")); 
-	var showDiureticInput = parseInt($(document).getUrlParam("d")); 
+	var showLengthInput = processUrlParameter("l"); 
+	var showADHInput = processUrlParameter("a"); 
+	var showOptionsInput = processUrlParameter("o"); 
+	var showDiureticInput = processUrlParameter("d"); 
 	var showAllOrNone = $(document).getUrlParam("s");
 	
 	//If "s" is set, show all or none of the inputs
@@ -697,8 +697,9 @@ function setup() {
 	 */
 	 
 	//Get URL parameters for settings
-	var ADHPresent = parseInt($(document).getUrlParam("b")); 
+	var ADHPresent = processUrlParameter("b"); 
 	if(ADHPresent) {
+		ADHPresent = 1;
 		cdWaterPermeable = true;		
 		cdUreaPermeable = true;	
 		nkccStimulated = true;
@@ -773,3 +774,16 @@ function setup() {
 	reset();
 }
 
+function processUrlParameter(parameter) {
+	var value = $(document).getUrlParam(parameter);
+	
+	if(value == null) {
+		return null;
+	}
+	else if(value == 0 || value == "false" || value == "no") {
+		return false;
+	}
+	else {
+		return true;
+	}
+}
