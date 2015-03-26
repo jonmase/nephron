@@ -1,5 +1,5 @@
 /*
-Simulation of the Urinary Concentrating Mechanism in the Nephron (HTML)
+Simulation of the Urinary Concentrating Mechanism in the Nephron (JS)
 Idea and Science: Dr Robert Wilkins, Department of Physiology, Anatomy and Genetics, University of Oxford
 Code: Dr Damion Young and Jon Mason, Medical Sciences Division Learning Technologies, University of Oxford
 Project Home Page: https://github.com/jonmase/nephron
