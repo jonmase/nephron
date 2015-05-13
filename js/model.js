@@ -82,6 +82,7 @@ var maxColourValue = 1500;		//Defines the cell value that corresponds to the dar
 //var ureaModel = 0;		//Which urea model to use: 0 = original (pump strength * 0.4), 1 = reduce ISF conc on flow, 2 = reduce ISF conc on transfer from CD
 var model = 1;		//Which model is being used (0 = water pumped out of CD/DLH to equal ISF (original model, poor treatment of urea), 1 = DLH/CD meet interstitium part way - better treatment of urea)
 
+var doAutoResize = 1;
 
 //Function for stepping (if running = false) or running (if running = true) model
 function start() {
@@ -524,7 +525,9 @@ function reset() {
 	$("#stepCount").html(totalStepCount + " steps");
 	redArrowLeft = true;
 	
-	callAutoHeight();
+	if(doAutoResize) {
+		callAutoHeight();
+	}
 }
 
 function addArrow(id, src, topOffset, leftOffset, width) {
@@ -691,6 +694,8 @@ function setup() {
 	var showOptionsInput = processUrlParameter("o"); 
 	var showDiureticInput = processUrlParameter("d"); 
 	var showAllOrNone = $(document).getUrlParam("s");
+	doAutoResize = processUrlParameter("r"); 
+	if(doAutoResize === null) { doAutoResize = true; }	//If parameter not given, set to true
 	
 	//If "s" is set, show all or none of the inputs
 	if(showAllOrNone == "none") {
