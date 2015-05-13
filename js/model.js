@@ -82,6 +82,7 @@ var maxColourValue = 1500;		//Defines the cell value that corresponds to the dar
 //var ureaModel = 0;		//Which urea model to use: 0 = original (pump strength * 0.4), 1 = reduce ISF conc on flow, 2 = reduce ISF conc on transfer from CD
 var model = 1;		//Which model is being used (0 = water pumped out of CD/DLH to equal ISF (original model, poor treatment of urea), 1 = DLH/CD meet interstitium part way - better treatment of urea)
 
+//Variable for controlling whether iframe is resized based on length of loop - defaults to true
 var doAutoResize = 1;
 
 //Function for stepping (if running = false) or running (if running = true) model
